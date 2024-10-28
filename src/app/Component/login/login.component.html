@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="login-container">
+    <h2>Login</h2>
+  
+    <!-- Login Form -->
+    <form (ngSubmit)="onSubmit()">
+      <!-- Username/Email -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input 
+          type="text" 
+          id="Username" 
+          [(ngModel)]="loginData.username" 
+          name="username" 
+          required 
+          placeholder="Enter your username" 
+          class="form-control"
+        />
+      </div>
+  
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input 
+          type="password" 
+          id="password" 
+          [(ngModel)]="loginData.password" 
+          name="password" 
+          required 
+          placeholder="Enter your password" 
+          class="form-control"
+        />
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary" [routerLink]="['/admin']" (click)="goToAdminPage()">Login</button>
+    </form>
+  
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>

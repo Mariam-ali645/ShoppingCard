@@ -1,1 +1,18 @@
-<p>items works!</p>
+
+<div class="item-page">
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search for items..."  [ngModel]="searchText" (input)="onSearch()" />
+  </div>
+
+  <!-- Item List -->
+  <div class="item-list">
+    <div class="item-card" *ngFor="let item of filteredItems">
+      <h3>{{ item.name }}</h3>
+      <p>Price: {{ item.price }}</p>
+
+      <!-- Add to Cart Button -->
+      <button class="btn btn-primary" (click)="addToCart(item)">Add to Cart</button>
+    </div>
+  </div>
+</div>
