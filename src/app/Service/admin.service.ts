@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AdminService {
-  private apiUrl = 'https://localhost:8080/admin';
+  private apiUrl = 'http://localhost:8080/item';
 
   constructor(private httpClient:HttpClient) { }
 }

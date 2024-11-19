@@ -1,18 +1,54 @@
-
-<div class="item-page">
-  <!-- Search Bar -->
-  <div class="search-bar">
-    <input type="text" placeholder="Search for items..."  [ngModel]="searchText" (input)="onSearch()" />
+<nav style="margin: auto" class="navbar navbar-expand-lg bg-dark">
+  <a style="color:white;" class="navbar-brand" href="#"> Shopping cart</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navbarSupportContent">
+  <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+     <li class="nav-item"> 
+      <a style="color: white;" class="nav-link-active" aria-current="page" href="addItem" routerLink="/addItem" >
+        Add new Item 
+    </a>
+    <br>
+      <a style="color: white;" class="nav-link-active" aria-current="page" href="shopping" routerLink="/shopping" >
+             Open Shopping List
+    </a>
+     </li>
+  </ul>
   </div>
-
+  </nav>
+  <div class="admin-container">
+    <hr>
+    <h2 style="text-align:center; margin-top :20px">Admin dashborad</h2>
+    <a style="color:rgb(86,86,86);font-size:xx-large;">Current item list</a>
+  </div>
+  
   <!-- Item List -->
   <div class="item-list">
-    <div class="item-card" *ngFor="let item of filteredItems">
-      <h3>{{ item.name }}</h3>
-      <p>Price: {{ item.price }}</p>
+    <table class="table table-stripped">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>price</th>
+        <th>quantity</th>
+      </tr>
+    </thead>
+    
+      <tbody >
+        @for (item of items; track $index) {
+        <tr  > 
+          <td>{{ item.id }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.quantity }}</td>
+        </tr>
+      }
+      </tbody>
+    
 
-      <!-- Add to Cart Button -->
-      <button class="btn btn-primary" (click)="addToCart(item)">Add to Cart</button>
+    </table>
+  
     </div>
-  </div>
-</div>
+
+

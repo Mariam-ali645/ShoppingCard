@@ -1,0 +1,28 @@
+<div class="add-container">
+
+    <h2 class="text-center" style="color:brown;" >Add New Item </h2>
+    <br>
+
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group-text-center ">
+        <label >Item Name</label>
+    <input  type="text" class="form-control" id="name" name="name" placeholder="Enter Item Name " [(ngModel)] = "items.name">
+</div>
+
+<div class="form-group">
+    <label >Item Price</label>
+    <br>
+<input   type="text"  id="price" name="price" placeholder="Enter Item Price"  [(ngModel)]= "items.price">
+ </div>
+
+ <div class="form-group">
+    <label>Item Quantity</label>
+    <br>
+<input   type="text"  id="quantity" name="quantity" placeholder="Enter Item Quantity" [(ngModel)]= "items.quantity">
+ </div>
+
+ <br>
+ <button type="submit" class="btn btn-success" >Save</button>
+   
+</form>
+</div>

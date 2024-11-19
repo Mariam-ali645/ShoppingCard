@@ -1,42 +1,56 @@
-<div class="login-container">
-    <h2>Login</h2>
+
+  <h2 id="hello " ></h2>
+
+    <h2 class="text-center">Login page  </h2>
+   
   
     <!-- Login Form -->
-    <form (ngSubmit)="onSubmit()">
-      <!-- Username/Email -->
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input 
+   <form   action="http://localhost:8080/item"  class="text-center">
+      
+      
+        User Name: <input 
           type="text" 
           id="Username" 
           [(ngModel)]="loginData.username" 
           name="username" 
           required 
           placeholder="Enter your username" 
-          class="form-control"
+          class="form-control" required
         />
-      </div>
+   
   
       <!-- Password -->
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input 
+      
+        Password: <input 
           type="password" 
           id="password" 
           [(ngModel)]="loginData.password" 
           name="password" 
           required 
           placeholder="Enter your password" 
-          class="form-control"
+          class="form-control " required 
         />
-      </div>
+     
+      <br>
+
   
       <!-- Submit Button -->
-      <button type="submit" class="btn btn-primary" [routerLink]="['/admin']" (click)="goToAdminPage()">Login</button>
-    </form>
+      <button type="submit" class="btn btn-primary"  onclick="onSubmit()">Login</button>
+   
   
-    <!-- Error Message -->
-    <div *ngIf="errorMessage" class="error-message">
-      {{ errorMessage }}
-    </div>
-  </div>
+    <script>
+      function pass(){
+        var username= document.getElementById('Username').value;
+        var password= document.getElementById('password').value;
+        if(username=="admin" && password=="123"){
+          alert("welcome")
+          window.location.href = "http://localhost:8080/items";
+        }else{
+          alert("Invalid username or password");
+        }
+        
+      }
+    </script>
+    </form>
+ 
+

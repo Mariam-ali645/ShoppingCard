@@ -1,1 +1,53 @@
 
+<nav style="margin: auto" class="navbar navbar-expand-lg bg-dark">
+    <a style="color:white;" class="navbar-brand" href="#"> Shopping List</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarSupportContent">
+    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+       <li class="nav-item">
+        
+        <a style="color: white;" class="nav-link active" aria-current="page" href="#" routerLink="/item">
+         Back
+      </a>
+       </li>
+    </ul>
+    </div>
+    </nav>
+    <div class="shopping-container">
+      <hr>
+      <h2 style="text-align:center; margin-top :20px">shopping list</h2>
+      <a style="color:rgb(86,86,86);font-size:xx-large;">Current item list</a>
+    </div>
+
+<div class="item-list">
+    <table class="table table-stripped">
+      <thead>
+      <tr>
+        <th>id</th>
+        <th>Order-Date</th>
+        <th>Order-Time</th>
+        <th>Customer-details</th>
+        <th>Items</th>
+      </tr>
+    </thead>
+    
+      <tbody>
+        @for (cart of carts ; track $index) {
+        <tr >
+          <td>{{ cart.id }}</td>
+          <td>{{ cart.orderDate }}</td>
+          <td>{{ cart.orderTime }}</td>
+          <td>{{ cart.customer }}</td>
+          <td>{{ cart.items }}</td>
+        </tr>
+    }
+      </tbody>
+    
+
+    </table>
+  
+    </div>
+
+
