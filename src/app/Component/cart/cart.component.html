@@ -8,7 +8,7 @@
     <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
        <li class="nav-item">
         
-        <a style="color: white;" class="nav-link active" aria-current="page" href="#" routerLink="/item">
+        <a style="color: white;" class="nav-link active" aria-current="page" href="item" routerLink="/item">
          Back
       </a>
        </li>
@@ -30,6 +30,7 @@
         <th>Order-Time</th>
         <th>Customer-details</th>
         <th>Items</th>
+        <th>Action</th>
       </tr>
     </thead>
     
@@ -41,6 +42,9 @@
           <td>{{ cart.orderTime }}</td>
           <td>{{ cart.customer }}</td>
           <td>{{ cart.items }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="delete(cart.id)">Delete</button>
+          </td>
         </tr>
     }
       </tbody>

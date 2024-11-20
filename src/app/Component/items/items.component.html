@@ -32,6 +32,7 @@
         <th>name</th>
         <th>price</th>
         <th>quantity</th>
+        <th>Action</th>
       </tr>
     </thead>
     
@@ -42,6 +43,11 @@
           <td>{{ item.name }}</td>
           <td>{{ item.price }}</td>
           <td>{{ item.quantity }}</td>
+          <td>
+            <button style="margin-right:3px;" type="button" class="btn btn-danger" (click)= " delete(item.id)">Delete</button>
+            
+          </td>
+          
         </tr>
       }
       </tbody>

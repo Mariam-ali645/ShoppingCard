@@ -14,7 +14,12 @@ export class ShoppingCartService {
   private apiUrl2 = 'http://localhost:8080/shopping';
 
   getCartItems() : Observable<ShoppingCart[]>{
-    return this.httpClient.get<ShoppingCart[]>(`${this.apiUrl2}`);  }
+    return this.httpClient.get<ShoppingCart[]>(`${this.apiUrl2}`); 
+   }
+
+   deleteFromShopping(id:number): Observable<Object>{
+    return this.httpClient.delete(`${this.apiUrl2}/${id}`);
+   }
 }
 
 

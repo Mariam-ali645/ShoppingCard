@@ -23,6 +23,11 @@ export class CartComponent {
       this.carts=data;
     })
   }
-  
+  delete(id:number){
+    this.shoppingCartService.deleteFromShopping(id).subscribe(data=>{
+      console.log(data);
+      this.getCart();
 
+  });
+}
 }

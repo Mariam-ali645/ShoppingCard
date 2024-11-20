@@ -24,6 +24,14 @@ export class ItemsComponent implements OnInit{
     })
     // Clear the form fields after adding an item to the cart;
   }
+  delete(id:number){
+    this.itemService.DeleteItem(id).subscribe(data=>{
+      console.log(data);
+      this.get();
+      
+    });
+
+  }
   
 
   }

@@ -18,4 +18,11 @@ export class ItemService {
   AddItem(item : Items) : Observable<Items>{
       return this.httpClient.post<Items>(`${this.apiUrl}`,item);
     }
+    
+  DeleteItem(id: number) : Observable<Object>
+  {
+    return this.httpClient.delete(`${this.apiUrl}/${id}`);
+  
 }
+}
+
