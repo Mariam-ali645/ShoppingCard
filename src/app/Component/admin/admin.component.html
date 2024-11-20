@@ -1,11 +1,44 @@
 
 
-    <div class="admin-container">
-        <h1>Welcome to Admin Page</h1>
-        <h2> Items :</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer page </title>
+</head>
+<body>
+    <h2 style="text-align: center; color: brown;">login as Admin</h2>
       
-        <!-- Button to add a new item -->
-        <button type="submit"  class="btn btn-primary"  [routerLink]="['http://localhost:8080/item?continue']" >show items</button>
-    </div>
+    <form   action= "" class="text-center">
+      
+        User Name: <input
+          class="form-control" 
+          type="text" 
+          id="Username" 
+          name="username" 
+          placeholder="Enter your username" 
+           required
+        />
+      <!-- Password -->
+      
+        Password: <input
+        class="form-control " 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Enter your password"
+          [ariaSetSize]="true"
+          required 
+        />
+     
+      <br>
+
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-success"  (click)="goToItem()"> Login</button>
+    </form>
+</body>
+</html>
 
 

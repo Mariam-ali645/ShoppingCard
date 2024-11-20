@@ -20,8 +20,11 @@ export class AdminComponent implements OnInit {
   
     
   }
-  constructor(private adminService: AdminService) { }
+  constructor(private adminService: AdminService,private router:Router) { }
 
-  
+  goToItem(){
+    this.router.navigate(['/item']);
+  }
+
 
 }

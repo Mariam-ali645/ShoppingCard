@@ -1,1 +1,55 @@
-<h1> Welcome to Home page </h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    
+    <nav style="margin: auto" class="navbar navbar-expand-lg bg-dark">
+        <a style="color:white;" class="navbar-brand" href="#"> Shopping cart</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarSupportContent">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        </ul>
+        <div class="mx-2">
+            <button  style="margin: 5px;" class="btn btn-danger" data-bs-target="#loginModel" data-bs-toggle="model"><a style="color: aliceblue;" href="admin" routerLink="/admin">login as admin</a></button>
+            <button  style="margin: 5px;" class="btn btn-danger" data-bs-target="#loginModel" data-bs-toggle="model"><a style="color: aliceblue;" href="customer" routerLink="/customer">login as customer</a></button>
+
+        </div>
+    </div>
+    </nav>
+   
+      <br>
+      <div class=" images-container">
+        
+        <form class="site-nav-search site-nav-search--nav" data-site-nav-search-form action="/search" autocomplete="off" >
+            <div class="site-nav-search__wrapper">
+              
+                <input
+                  name="q"
+                  class="site-nav-search__input"
+                  type="text"
+                  placeholder="What are you looking for?"
+                  value=""
+                  data-site-nav-search-input
+                  autocomplete="off"
+                  autocapitalize="off"
+                />
+          
+              <button class="site-nav-search__btn btn2 btn2--circle btn2--primary-alt" aria-label="Search" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" class="icon ">
+                    <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          
+              </button>
+            </div>
+            <img src="assets/colors.webp"   style="background-size: cover; background-position: center;  align-items: center;  height: 100vh;" >
+          </form>
+        
+        
+      </div>
+</body>
+</html>

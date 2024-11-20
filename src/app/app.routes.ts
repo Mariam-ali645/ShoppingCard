@@ -9,12 +9,12 @@ import { LoginComponent } from './Component/login/login.component';
 import { AddItemComponent } from './Component/add-item/add-item.component';
 
 export const routes: Routes = [
-    //{path: '', redirectTo: 'http://localhost:8080/login', pathMatch: 'full'},
-    
     {path:'item',component:ItemsComponent},
     {path:'shopping' ,component: CartComponent},
-    {path:'addItem' ,component: AddItemComponent}
-    
-   
+    {path:'addItem' ,component: AddItemComponent},
+    {path :'home',component: HomeComponent},
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path :'admin',component: AdminComponent},
+    {path : 'customer',component: CustomerComponent},
     
 ];

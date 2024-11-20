@@ -6,28 +6,35 @@
     <title>customer page </title>
 </head>
 <body>
-    <h1>Welcome to Customer Page</h1>
-    <a href="items.component.html">show items</a>
-    <h2>Items</h2>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-    <h2>Cart</h2>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-    <h2>Orders</h2>
-    <ul>
-        <li>Order 1</li>
-        <li>Order 2</li>
-        <li>Order 3</li>
-    </ul>
-    
+    <h2 style="text-align: center; color: brown;">login as customer</h2>
+      
+    <form   action= "" class="text-center">
+      
+        User Name: <input
+          class="form-control" 
+          type="text" 
+          id="Username" 
+          name="username" 
+          placeholder="Enter your username" 
+           required
+        />
+      <!-- Password -->
+      
+        Password: <input
+        class="form-control " 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Enter your password"
+          [ariaSetSize]="true"
+          required 
+        />
+     
+      <br>
 
-    
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-success"  (click)="goToShoppingList()"> Login</button>
+    </form>
 </body>
 </html>
