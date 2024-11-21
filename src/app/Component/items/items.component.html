@@ -5,18 +5,37 @@
   </button>
 <div class="collapse navbar-collapse" id="navbarSupportContent">
   <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-     <li class="nav-item"> 
+    
       <a style="color: white;" class="nav-link-active" aria-current="page" href="addItem" routerLink="/addItem" >
         Add new Item 
-    </a>
-    <br>
-      <a style="color: white;" class="nav-link-active" aria-current="page" href="shopping" routerLink="/shopping" >
-             Open Shopping List
-    </a>
-     </li>
+    </a>  
   </ul>
+ <a    href="home" routerLink="/home"> <button  style="text-align: right;" type="button" class="btn btn-danger" >Log out</button></a>
   </div>
   </nav>
+  
+  <form class="site-nav-search site-nav-search--nav" data-site-nav-search-form action="/search" autocomplete="off" >
+    <div class="site-nav-search__wrapper">
+      
+        <input
+          name="q"
+          class="site-nav-search__input"
+          type="text"
+          placeholder="What are you looking for?"
+          value=""
+          data-site-nav-search-input
+          autocomplete="off"
+          autocapitalize="off"
+        />
+  
+      <button class="site-nav-search__btn btn2 btn2--circle btn2--primary-alt" aria-label="Search" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" class="icon ">
+            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+  
+      </button>
+    </div>
+    </form>
   <div class="admin-container">
     <hr>
     <h2 style="text-align:center; margin-top :20px">Admin dashborad</h2>
@@ -44,6 +63,7 @@
           <td>{{ item.price }}</td>
           <td>{{ item.quantity }}</td>
           <td>
+            
             <button style="margin-right:3px;" type="button" class="btn btn-danger" (click)= " delete(item.id)">Delete</button>
             
           </td>

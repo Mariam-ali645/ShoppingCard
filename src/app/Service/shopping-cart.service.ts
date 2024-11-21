@@ -20,6 +20,10 @@ export class ShoppingCartService {
    deleteFromShopping(id:number): Observable<Object>{
     return this.httpClient.delete(`${this.apiUrl2}/${id}`);
    }
+   saveToShopping(shoppingCart:ShoppingCart): Observable<ShoppingCart>{
+   return this.httpClient.post<ShoppingCart>(`${this.apiUrl2}`, ShoppingCart);
+
+   }
 }
 
 

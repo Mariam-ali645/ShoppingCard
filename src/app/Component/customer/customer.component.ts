@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ItemService } from '../../Service/item.service';
+import { Items } from '../../Models/items';
 
 @Component({
   selector: 'app-customer',
@@ -10,10 +12,16 @@ import { Router } from '@angular/router';
 })
 export class CustomerComponent {
 
-  constructor(private router: Router){};
+  constructor(private router: Router,private itemService:ItemService){};
+  item:Items[]=[];
+  ngOnInit(){
+    this.itemService.getItems().subscribe(data=>{
+      this.item = data;
+    });
+  }
 
-  goToShoppingList(){
-    this.router.navigate(['/shopping']);
+  goToItemList(){
+    this.router.navigate(['/addToCart']);
   }
 
 
