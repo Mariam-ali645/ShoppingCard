@@ -16,7 +16,7 @@ export class AddItemComponent {
   constructor(private itemService:ItemService, private router:Router){}
 
   saveItem(){
-    this.itemService.AddItem(this.items).subscribe(data => console.log("Item saved successfully: "+data));
+    this.itemService.AddItem(this.items).subscribe(data =>{console.log(data)} );
     this.goToItem();
   }
 

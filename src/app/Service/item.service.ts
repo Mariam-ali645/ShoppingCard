@@ -11,6 +11,7 @@ export class ItemService {
   
   constructor(private httpClient:HttpClient) { }
   private apiUrl = 'http://localhost:8080/item';
+  private apiUrl2 = 'http://localhost:8080/item/id';
   
   getItems() : Observable<Items[]>{
     return this.httpClient.get<Items[]>(`${this.apiUrl}`);  }
@@ -23,6 +24,12 @@ export class ItemService {
   {
     return this.httpClient.delete(`${this.apiUrl}/${id}`);
   
-}
+  }
+  updateItem(id:number,item:Items): Observable<Object>{
+    return this.httpClient.put<Items>(`${this.apiUrl}/${id}`,item);
+  }
+  getItemById(id:number): Observable<Items>{
+    return this.httpClient.get<Items>(`${this.apiUrl2}/${id}`);
+  }
 }
 

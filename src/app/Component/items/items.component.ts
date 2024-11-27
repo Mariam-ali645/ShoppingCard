@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../Service/item.service';
 import { Items } from '../../Models/items';
 import  {FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-items',
@@ -12,8 +13,11 @@ import  {FormsModule } from '@angular/forms';
 })
 export class ItemsComponent implements OnInit{
   
+  id:number = 0;
+  item: Items=new Items();
   items: Items[] = [];
-  constructor(private itemService:ItemService) { }
+
+  constructor(private itemService:ItemService,private router:Router) { }
   ngOnInit(): void {
    
     this.get();
@@ -32,7 +36,12 @@ export class ItemsComponent implements OnInit{
     });
 
   }
+  update(id:number){
+    this.router.navigate(['updateItem',id]);
+  }
   
+  
+ 
 
   }
   

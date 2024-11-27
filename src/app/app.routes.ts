@@ -7,6 +7,7 @@ import { CustomerComponent } from './Component/customer/customer.component';
 import { CartComponent } from './Component/cart/cart.component';
 import { AddItemComponent } from './Component/add-item/add-item.component';
 import { AddToCartComponent } from './Component/add-to-cart/add-to-cart.component';
+import { UpdateItemComponent } from './Component/update-item/update-item.component';
 
 export const routes: Routes = [
     {path:'item',component:ItemsComponent},
@@ -17,5 +18,6 @@ export const routes: Routes = [
     {path :'admin',component: AdminComponent},
     {path : 'customer',component: CustomerComponent},
     {path :'addToCart',component: AddToCartComponent},
+    {path:'updateItem/:id',component: UpdateItemComponent},
     
 ];

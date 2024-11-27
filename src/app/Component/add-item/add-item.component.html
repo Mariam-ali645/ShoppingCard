@@ -1,44 +1,49 @@
 <nav style="margin: auto" class="navbar navbar-expand-lg bg-dark">
+    
     <a style="color:rgb(213, 21, 111);" class="navbar-brand" > Shopping cart</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  <div class="collapse navbar-collapse" id="navbarSupportContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-       <li class="nav-item">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportContent">
+           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <li class="nav-item">
         
-        <a style="color: white;" class="nav-link active" aria-current="page" href="item" routerLink="/item">
-         Back To Items
-      </a>
-       </li>
-    </ul>
-    </div>
-    </nav>
+                   <a style="color: white;" class="nav-link active" aria-current="page" href="item" routerLink="/item">
+                       Back To Items
+                    </a>
+                </li>
+            </ul>
+        </div>
+</nav>
+   
 <div class="add-container">
 
     <h2 class="text-center" style="color:brown;" >Add New Item </h2>
-    <br>
+       
 
-<form (ngSubmit)="onSubmit()">
-    <div class="form-group-text-center ">
-        <label >Item Name</label>
-    <input  type="text" class="form-control" id="name" name="name" placeholder="Enter Item Name " [(ngModel)] = "items.name">
+    <form  (ngSubmit)="onSubmit()">
+        <div class ="form-group">
+    
+            <label >Item Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="enter item name" [(ngModel)]= "items.name" >
+        
+    
+        </div>
+        <div class ="form-group-text-center">
+        
+            <label >Item price</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="enter item price" [(ngModel)]= "items.price" >
+        
+    
+        </div>
+        <div class="form-group">
+            <label>Item Quantity</label>
+            <input   type="text"    class="form-control" id="quantity" name="quantity" placeholder="Enter Item Quantity" [(ngModel)]= "items.quantity">
+         </div>
+    
+          <br>
+    
+          <button type="submit" class="btn btn-success" >Save</button>
+    </form>
 </div>
-
-<div class="form-group">
-    <label >Item Price</label>
-    <br>
-<input   type="text"  id="price" name="price" placeholder="Enter Item Price"  [(ngModel)]= "items.price">
- </div>
-
- <div class="form-group">
-    <label>Item Quantity</label>
-    <br>
-<input   type="text"  id="quantity" name="quantity" placeholder="Enter Item Quantity" [(ngModel)]= "items.quantity">
- </div>
-
- <br>
- <button type="submit" class="btn btn-success" >Save</button>
-   
-</form>
-</div>
+    
