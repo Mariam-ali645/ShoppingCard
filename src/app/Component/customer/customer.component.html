@@ -1,32 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>customer page </title>
-</head>
-<body>
+
+
     <h2 style="text-align: center; color: brown;">login as customer </h2>
+    <h6 style="text-align: center;">please enter username and password </h6>
       
-    <form   action= "" class="text-center">
+    <div style="text-align: center;">
       
         User Name: <input
-          class="form-control" 
+          class="form-group" 
           type="text" 
           id="Username" 
-          name="username" 
+          name="username"
+          [(ngModel)]= "username"   
           placeholder="Enter your username" 
            required
         />
-      <!-- Password -->
-      
+        <br>
         Password: <input
-        class="form-control " 
+        class="form-group" 
           type="password" 
           id="password" 
-          name="password" 
+          name="password"
+          [(ngModel)]= "password" 
           placeholder="Enter your password"
-          [ariaSetSize]="true"
+          
           required 
         />
      
@@ -34,7 +30,8 @@
 
   
       <!-- Submit Button -->
-    <a  href="addToCart " routerLink="/addToCart"> <button type="submit" class="btn btn-success"  (click)="goToItemList()"  > Login</button></a> 
-    </form>
-</body>
-</html>
+       <button type="submit" class="btn btn-success"  (click)="checkLogin()" style="margin: 30px;" > Login</button>
+       <button type="button" class="btn btn-warning" routerLink="/home" > cancel</button>
+      </div>
+ 
+

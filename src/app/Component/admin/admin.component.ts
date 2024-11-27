@@ -20,10 +20,28 @@ export class AdminComponent implements OnInit {
   
     
   }
+  username:string = '';
+  password:string = '';
+  inValid= false;
   constructor(private adminService: AdminService,private router:Router) { }
 
   goToItem(){
     this.router.navigate(['/item']);
+  }
+  checkLogin(){
+    if(this.username == 'admin' && this.password == '456'){
+      sessionStorage.setItem('username', this.username);
+      
+      this.router.navigate(['/item']);
+      return true;
+
+    }else{
+      alert('wrong credentials');
+      this.router.navigate(['/home']);
+      return false;
+      
+    }
+
   }
 
 

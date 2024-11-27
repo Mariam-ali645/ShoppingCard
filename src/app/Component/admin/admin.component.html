@@ -1,44 +1,43 @@
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>customer page </title>
-</head>
-<body>
-    <h2 style="text-align: center; color: brown;">login as Admin</h2>
+
+    
       
-    <form   action= "" class="text-center">
-      
-        User Name: <input
-          class="form-control" 
+    
+     
+        <h2 style="text-align: center; color: brown;">Admin dashborad</h2>
+        <h6 style="text-align: center;">please login first</h6>
+    <div class="mb-3"  style= "text-align: center;">
+        <label class="form-label" style="margin: 20px;">User Name:</label>
+         <input
+          class="form-group-text-center" 
           type="text" 
           id="Username" 
-          name="username" 
+          name="username"
+          [(ngModel)]= "username" 
           placeholder="Enter your username" 
            required
         />
-      <!-- Password -->
+       
       
         Password: <input
-        class="form-control " 
+        class="form-group" 
           type="password" 
           id="password" 
           name="password" 
+          [(ngModel)]= "password" 
           placeholder="Enter your password"
           [ariaSetSize]="true"
           required 
         />
      
-      <br>
+         <br>
 
   
-      <!-- Submit Button -->
-      <button type="submit" class="btn btn-success"  (click)="goToItem()"> Login</button>
-    </form>
-</body>
-</html>
+         <!-- Submit Button -->
+          <button type="submit" class="btn btn-success"  (click)="checkLogin()"> Login</button>
+          <button type="button" class="btn btn-warning" style="margin: 30px;" routerLink="/home"> cancel</button>
+     </div>
+  
 
 

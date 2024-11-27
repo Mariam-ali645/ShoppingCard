@@ -52,7 +52,6 @@
         <th>price</th>
         <th>quantity</th>
         <th>Action</th>
-        <th>Edit</th>
       </tr>
     </thead>
     
@@ -66,12 +65,7 @@
           <td>
             
             <button style="margin-right:3px;" type="button" class="btn btn-danger" (click)= " delete(item.id)">Delete</button>
-            
-          </td>
-          <td>
-            
-            <button style="margin-right:3px;" type="button" class="btn btn-success" (click)= "update(item.id)">Edit</button>
-            
+            <button style="margin-right:3px;" type="button" class="btn btn-info" (click)= "update(item.id)">Edit</button>
           </td>
           
         </tr>
