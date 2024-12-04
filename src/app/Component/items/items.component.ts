@@ -3,6 +3,7 @@ import { ItemService } from '../../Service/item.service';
 import { Items } from '../../Models/items';
 import  {FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../Service/authentication.service';
 
 @Component({
   selector: 'app-items',
@@ -17,7 +18,7 @@ export class ItemsComponent implements OnInit{
   item: Items=new Items();
   items: Items[] = [];
 
-  constructor(private itemService:ItemService,private router:Router) { }
+  constructor(private itemService:ItemService,private router:Router,private authe:AuthenticationService) { }
   ngOnInit(): void {
    
     this.get();

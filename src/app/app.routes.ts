@@ -8,9 +8,10 @@ import { CartComponent } from './Component/cart/cart.component';
 import { AddItemComponent } from './Component/add-item/add-item.component';
 import { AddToCartComponent } from './Component/add-to-cart/add-to-cart.component';
 import { UpdateItemComponent } from './Component/update-item/update-item.component';
+import { AuthenguardService } from './Service/authenguard.service';
 
 export const routes: Routes = [
-    {path:'item',component:ItemsComponent},
+    {path:'item',component:ItemsComponent,canActivate:[AuthenguardService]},
     {path:'shopping' ,component: CartComponent},
     {path:'addItem' ,component: AddItemComponent},
     {path :'home',component: HomeComponent},

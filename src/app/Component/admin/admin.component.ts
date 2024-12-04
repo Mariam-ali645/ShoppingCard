@@ -4,6 +4,7 @@ import { Router, RouterLink, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AdminService } from '../../Service/admin.service';
 import { NgFor } from '@angular/common';
+import { AuthenticationService } from '../../Service/authentication.service';
 
 
 
@@ -23,22 +24,21 @@ export class AdminComponent implements OnInit {
   username:string = '';
   password:string = '';
   inValid= false;
-  constructor(private adminService: AdminService,private router:Router) { }
+  constructor(private adminService: AdminService,private router:Router,private authent:AuthenticationService) { }
 
   goToItem(){
     this.router.navigate(['/item']);
   }
   checkLogin(){
-    if(this.username == 'admin' && this.password == '456'){
-      sessionStorage.setItem('username', this.username);
-      
+    if(this.authent.adminLogin(this.username,this.password)){
+    
       this.router.navigate(['/item']);
-      return true;
+      this.inValid= false;
 
     }else{
       alert('wrong credentials');
       this.router.navigate(['/home']);
-      return false;
+      this.inValid= true;
       
     }
 
