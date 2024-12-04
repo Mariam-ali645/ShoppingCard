@@ -17,12 +17,12 @@ export class CustomerauthenticationService {
       return false;
     }
   }
-  isLoggedIn(){
+  isCustomerLoggedIn(){
     console.log('user logged in');
     return sessionStorage.getItem('username')!= null;
   }
 
-  logout(){
+  customerlogout(){
     sessionStorage.removeItem('username');
     console.log('user logged out');
   }

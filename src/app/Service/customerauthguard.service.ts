@@ -9,7 +9,7 @@ export class CustomerauthguardService implements CanActivate {
 
   constructor(private authen:CustomerauthenticationService,private router:Router) { }
   canActivate() {
-    if(this.authen.isLoggedIn()) {
+    if(this.authen.isCustomerLoggedIn()) {
        return true;
   }else{
     this.router.navigate(['/customer']);

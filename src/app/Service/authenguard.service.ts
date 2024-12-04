@@ -7,9 +7,9 @@ import { AuthenticationService } from './authentication.service';
 })
 export class AuthenguardService  implements CanActivate{
 
-  constructor(private authen:AuthenticationService,private router:Router) { }
+  constructor(private adminauthen:AuthenticationService,private router:Router) { }
   canActivate() {
-    if(this.authen.isLoggedIn()) {
+    if(this.adminauthen.isLoggedIn()) {
        return true;
   }else{
     this.router.navigate(['/admin']);

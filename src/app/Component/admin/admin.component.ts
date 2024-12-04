@@ -37,7 +37,7 @@ export class AdminComponent implements OnInit {
 
     }else{
       alert('wrong credentials');
-      this.router.navigate(['/home']);
+      this.router.navigate(['/admin']);
       this.inValid= true;
       
     }

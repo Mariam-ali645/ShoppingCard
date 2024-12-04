@@ -12,14 +12,14 @@ import { AuthenguardService } from './Service/authenguard.service';
 import { CustomerauthguardService } from './Service/customerauthguard.service';
 
 export const routes: Routes = [
-    {path:'item',component:ItemsComponent,canActivate:[AuthenguardService]},
+    {path:'item',component:ItemsComponent,canActivate:[AuthenguardService ]},
     {path:'shopping' ,component: CartComponent,canActivate: [CustomerauthguardService]},
-    {path:'addItem' ,component: AddItemComponent,canActivate:[AuthenguardService]},
+    {path:'addItem' ,component: AddItemComponent,canActivate:[AuthenguardService ]},
     {path :'home',component: HomeComponent},
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path :'admin',component: AdminComponent},
     {path : 'customer',component: CustomerComponent},
     {path :'addToCart',component: AddToCartComponent,canActivate: [CustomerauthguardService]},
-    {path:'updateItem/:id',component: UpdateItemComponent,canActivate:[AuthenguardService]},
+    {path:'updateItem/:id',component: UpdateItemComponent,canActivate:[AuthenguardService ]},
     
 ];

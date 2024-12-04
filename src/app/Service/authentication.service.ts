@@ -8,10 +8,10 @@ export class AuthenticationService {
   constructor() { }
   
 
-  adminLogin(username2: string, password2: string){
+  adminLogin(username: string, password: string){
 
-    if(username2 == 'admin' && password2 =='456'){
-      sessionStorage.setItem('username2',username2);
+    if(username == 'admin' && password =='456'){
+      sessionStorage.setItem('username',username);
       console.log('hi to your section');
       return true;
     }else{
@@ -22,11 +22,11 @@ export class AuthenticationService {
 
   isLoggedIn(){
     console.log('user logged in');
-    return sessionStorage.getItem('username2')!= null;
+    return sessionStorage.getItem('username')!= null;
   }
 
   logout(){
-    sessionStorage.removeItem('username2');
+    sessionStorage.removeItem('username');
     console.log('user logged out');
   }
 
