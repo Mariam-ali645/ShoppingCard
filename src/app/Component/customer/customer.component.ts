@@ -4,6 +4,7 @@ import { ItemService } from '../../Service/item.service';
 import { Items } from '../../Models/items';
 import { FormsModule } from '@angular/forms';
 import { AuthenticationService } from '../../Service/authentication.service';
+import { CustomerauthenticationService } from '../../Service/customerauthentication.service';
 
 @Component({
   selector: 'app-customer',
@@ -17,7 +18,7 @@ export class CustomerComponent {
   password: string='';
   inValid= false;
 
-  constructor(private router: Router,private itemService:ItemService, private authen:AuthenticationService){};
+  constructor(private router: Router,private itemService:ItemService, private authen:CustomerauthenticationService){};
   item:Items[]=[];
   ngOnInit(){
   }

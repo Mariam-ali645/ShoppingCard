@@ -3,15 +3,13 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService {
+export class CustomerauthenticationService {
 
   constructor() { }
-  
+  customerLogin(username: string, password: string){
 
-  adminLogin(username2: string, password2: string){
-
-    if(username2 == 'admin' && password2 =='456'){
-      sessionStorage.setItem('username2',username2);
+    if(username == 'customer' && password =='123'){
+      sessionStorage.setItem('username',username);
       console.log('hi to your section');
       return true;
     }else{
@@ -19,15 +17,13 @@ export class AuthenticationService {
       return false;
     }
   }
-
   isLoggedIn(){
     console.log('user logged in');
-    return sessionStorage.getItem('username2')!= null;
+    return sessionStorage.getItem('username')!= null;
   }
 
   logout(){
-    sessionStorage.removeItem('username2');
+    sessionStorage.removeItem('username');
     console.log('user logged out');
   }
-
 }
